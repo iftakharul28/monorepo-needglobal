@@ -1,16 +1,17 @@
-## Getting Started
+## Getting Started with monorepo
 
 NPM Packages:
 
 ```bash
-1. nextjs
-2. reactjs
-3. fastify
-4. @iftakhar/ui
-5. prisma
-6. sqlite
-7. lucia
-8. notyf
+1. trpc
+2. nextjs
+3. reactjs
+4. fastify
+5. @iftakhar/ui
+6. prisma
+7. sqlite
+8. lucia
+9. notyf
 
 ```
 
@@ -58,8 +59,8 @@ yarn db:studio
 
 Last, see the results:
 
-Open [Frontend](http://localhost:5000) with your browser to see Frontend.
+[Frontend](http://localhost:5000) with your browser.
 
-Open [Dashboard](http://localhost:5001) with your browser to see Dashboard.
+[Dashboard](http://localhost:5001) with your browser.
 
-Open [Api](http://localhost:8000) with your api to see.
+[Api](http://localhost:8000) with your api to see.
