@@ -1,5 +1,4 @@
 import { redirect } from 'next/navigation';
-import '@iftakhar/ui/lib/cjs/index.css';
 import { getUserAuth } from '@frontend/src/lib/auth/utils';
 
 export default async function Layout({ children }: { children: React.ReactNode }) {

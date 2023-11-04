@@ -15,7 +15,7 @@ export default function HomePage() {
     },
   });
   return (
-    <div className='max-w-5xl mx-auto md:p-0 p-6'>
+    <div className='max-w-7xl mx-auto md:p-0 p-6'>
       <h1>Vite + React</h1>
       <h2>{greeting}</h2>
       <pre className='bg-slate-100 p-6 rounded-lg my-2'>{JSON.stringify(user, null, 2)}</pre>

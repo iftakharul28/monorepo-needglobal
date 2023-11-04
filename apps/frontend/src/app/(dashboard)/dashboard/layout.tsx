@@ -12,11 +12,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <section className='flex gap-2'>
       <Sidebar className='h-full min-h-screen sitebar' breakPoint='md' collapsed={collapsedSidebar} toggled={toggleSidebar} onToggle={(toggle) => setToggleSidebar(toggle)}>
         <Sidebar.Header className='flex justify-center py-2'>
-          <img src={'/favicon.ico'} alt='applegadgets' className='w-10' />
+          <Link href={'/'}>
+            <img src={'/favicon.ico'} alt='applegadgets' className='w-10' />
+          </Link>
         </Sidebar.Header>
         <Sidebar.Content className='h-full'>
           <Sidebar.Menu iconShape='circle'>
-            <Sidebar.MenuItem icon={<Blocks />}>Dashboard</Sidebar.MenuItem>
+            <Sidebar.MenuItem icon={<Blocks />}>
+              <Link href={'/dashboard'}>Dashboard</Link>
+            </Sidebar.MenuItem>
             <Sidebar.MenuItem icon={<MediaIcon />}>
               <Link href={'/dashboard/media'}>Media</Link>
             </Sidebar.MenuItem>
@@ -26,22 +30,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               </Sidebar.MenuItem>
               <Sidebar.MenuItem>
                 <Link href={'/dashboard/post'}>Post List</Link>
-              </Sidebar.MenuItem>
-            </Sidebar.SubMenu>
-            <Sidebar.SubMenu title={'Category Manage'} icon={<Store />}>
-              <Sidebar.MenuItem>
-                <Link href={'/dashboard/category/new'}>Add Category</Link>
-              </Sidebar.MenuItem>
-              <Sidebar.MenuItem>
-                <Link href={'/dashboard/category'}>Category List</Link>
-              </Sidebar.MenuItem>
-            </Sidebar.SubMenu>
-            <Sidebar.SubMenu title={'Tag Manage'} icon={<Store />}>
-              <Sidebar.MenuItem>
-                <Link href={'/dashboard/tag/new'}>Add Tag</Link>
-              </Sidebar.MenuItem>
-              <Sidebar.MenuItem>
-                <Link href={'/dashboard/tag'}>Tag List</Link>
               </Sidebar.MenuItem>
             </Sidebar.SubMenu>
           </Sidebar.Menu>

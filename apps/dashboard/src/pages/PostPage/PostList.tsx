@@ -1,4 +1,4 @@
-import { Button, Modal, Table } from '@iftakhar/ui';
+import { Breadcrumb, Button, Modal, Table } from '@iftakhar/ui';
 import { trpc } from '../../lib/trpc';
 // import { Link } from 'react-router-dom';
 import { DeleteIcon } from '../../constant/icons';
@@ -6,6 +6,7 @@ import toast from '../../lib/toast';
 import { useState } from 'react';
 import PostFrom from '../../components/form/PostFrom';
 import ImageForm from '../../components/form/ImageForm';
+import { Link } from 'react-router-dom';
 
 export default function ModelPage() {
   const [isActive, setActive] = useState<boolean>(false);
@@ -20,7 +21,13 @@ export default function ModelPage() {
     },
   });
   return (
-    <div>
+    <div className='container'>
+      <Breadcrumb separator={'/'} className='mb-6'>
+        <Breadcrumb.Item>
+          <Link to={'/'}>Home</Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Item>Post list</Breadcrumb.Item>
+      </Breadcrumb>
       <Modal
         title={'Post model'}
         visible={isActive}
@@ -57,7 +64,7 @@ export default function ModelPage() {
         className='w-full caption-bottom text-sm'
         title={
           <div className='flex justify-between px-8 py-2'>
-            <span>Event List</span>
+            <span>Post List</span>
             <button type='button' onClick={() => setActive(!isActive)}>
               Add new
             </button>

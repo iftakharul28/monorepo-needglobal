@@ -1,5 +1,5 @@
 'use client';
-import { Button, Table } from '@iftakhar/ui';
+import { Button, Breadcrumb, Table } from '@iftakhar/ui';
 import Link from 'next/link';
 import { trpc } from '@frontend/src/helpers/trpc';
 import { DeleteIcon } from '@frontend/src/constant/icons';
@@ -13,14 +13,20 @@ export default function PostPage() {
     },
   });
   return (
-    <div>
+    <section className='container my-8'>
+      <Breadcrumb separator={'/'} className='mb-6'>
+        <Breadcrumb.Item>
+          <Link href={'/'}>Home</Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Item>New Post</Breadcrumb.Item>
+      </Breadcrumb>
       <Table
         loading={isLoading}
         dataSource={modelList?.length ? modelList : []}
         className='w-full caption-bottom text-sm'
         title={
           <div className='flex justify-between px-8 py-2'>
-            <span>Event List</span>
+            <span>Post List</span>
             <Link href={`/dashboard/post/new`}>Add new</Link>
           </div>
         }
@@ -74,6 +80,6 @@ export default function PostPage() {
           //   },
         ]}
       />
-    </div>
+    </section>
   );
 }

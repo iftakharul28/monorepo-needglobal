@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import '@iftakhar/ui/lib/cjs/index.css';
 import { headers } from 'next/headers';
 import { Provider } from '../helpers/Provider';
 
